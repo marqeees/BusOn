@@ -11,8 +11,8 @@ class LinhaController extends Controller
 {
     public function index(Request $request)
     {
-        $linhas = Linha::paginate(10);
         $cidade = DB::table('cidades')->where('slug', $request->slug)->get();
+        $linhas = DB::table('linhas')->where('cidade_id', $cidade[0]->id)->get();
        
         return view('adm.linhas.index', compact('linhas','cidade'));
     }

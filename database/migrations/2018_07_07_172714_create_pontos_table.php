@@ -18,7 +18,7 @@ class CreatePontosTable extends Migration
             $table->integer('cidade_id')->unsigned();
             $table->foreign('cidade_id')->references('id')->on('cidades');
             $table->string('nome');
-            $table->longText('endereço');
+            $table->longText('endereco');
             $table->longText('maps');
             $table->string('imagem');
             $table->timestamps();

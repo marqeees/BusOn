@@ -20,4 +20,6 @@ Route::prefix('adm')->group(function () {
     });
     Route::delete('/dlinhas/{id}', 'linhaController@destroy')->name('dlinhas');
     Route::post('/elinhas/{id}', 'linhaController@update')->name('elinhas');
+    Route::delete('/dpontos/{id}', 'pontoController@destroy')->name('dpontos');
+    Route::post('/epontos/{id}', 'pontoController@update')->name('epontos');
 });
