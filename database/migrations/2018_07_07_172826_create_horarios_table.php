@@ -22,7 +22,7 @@ class CreateHorariosTable extends Migration
             $table->integer('linha_id')->unsigned();
             $table->foreign('linha_id')->references('id')->on('linhas');
             $table->integer('dia');
-            $table->string('horario');
+            $table->time('horario');
             $table->timestamps();
         });
     }
